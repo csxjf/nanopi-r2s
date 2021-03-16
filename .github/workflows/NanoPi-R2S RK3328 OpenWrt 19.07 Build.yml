@@ -1,15 +1,16 @@
 name: NanoPi-R2S RK3328 OpenWrt 19.07 Build
 
 on:
-  push:
-    paths:
-      - 'CHANGELOG.md'
+#  schedule:
+#    - cron: 5 9 * * 0
+  watch:
+    types: started'
 
 jobs:
 
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
 
